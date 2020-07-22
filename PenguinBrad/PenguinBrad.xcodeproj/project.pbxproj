@@ -13,6 +13,7 @@
 		24CE34D324C768B7007C648C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24CE34D224C768B7007C648C /* Assets.xcassets */; };
 		24CE34D624C768B7007C648C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24CE34D524C768B7007C648C /* Preview Assets.xcassets */; };
 		24CE34D924C768B7007C648C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CE34D724C768B7007C648C /* LaunchScreen.storyboard */; };
+		F12CE50924C8AEA600EBF4A6 /* TelaContentViewNova.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CE50824C8AEA600EBF4A6 /* TelaContentViewNova.swift */; };
 		F1B70F3024C76EB400187CBE /* MissoesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B70F2F24C76EB400187CBE /* MissoesScreen.swift */; };
 		F1B70F3424C7707C00187CBE /* PerfilScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B70F3324C7707C00187CBE /* PerfilScreen.swift */; };
 		F1B70F3624C7752800187CBE /* WebKitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B70F3524C7752800187CBE /* WebKitCell.swift */; };
@@ -27,6 +28,7 @@
 		24CE34D524C768B7007C648C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24CE34D824C768B7007C648C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24CE34DA24C768B7007C648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12CE50824C8AEA600EBF4A6 /* TelaContentViewNova.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaContentViewNova.swift; sourceTree = "<group>"; };
 		F1B70F2F24C76EB400187CBE /* MissoesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissoesScreen.swift; sourceTree = "<group>"; };
 		F1B70F3324C7707C00187CBE /* PerfilScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilScreen.swift; sourceTree = "<group>"; };
 		F1B70F3524C7752800187CBE /* WebKitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitCell.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				24CE34CC24C768B6007C648C /* AppDelegate.swift */,
 				24CE34CE24C768B6007C648C /* SceneDelegate.swift */,
 				24CE34D024C768B6007C648C /* ContentView.swift */,
+				F12CE50824C8AEA600EBF4A6 /* TelaContentViewNova.swift */,
 				F1B70F2F24C76EB400187CBE /* MissoesScreen.swift */,
 				F1B70F3324C7707C00187CBE /* PerfilScreen.swift */,
 				F1B70F3524C7752800187CBE /* WebKitCell.swift */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12CE50924C8AEA600EBF4A6 /* TelaContentViewNova.swift in Sources */,
 				F1B70F3424C7707C00187CBE /* PerfilScreen.swift in Sources */,
 				24CE34CD24C768B6007C648C /* AppDelegate.swift in Sources */,
 				F1B70F3024C76EB400187CBE /* MissoesScreen.swift in Sources */,

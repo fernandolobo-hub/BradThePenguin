@@ -10,26 +10,6 @@ import SwiftUI
 
 
 
-
-
-struct MissoesScreen: View {
-    var body: some View {
-        NavigationView{ //Mostrar página de Navegação
-            
-            Home()
-            
-
-        }
-    }
-}
-
-struct MissoesScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        MissoesScreen()
-    }
-}
-
-
 struct Home: View {
     
     @State var data = [Type(name: "Formatos", pic: "person"),
@@ -43,15 +23,13 @@ struct Home: View {
     
     
     var body: some View{
-        
-        
-        
+    
         
         VStack{
      
             VStack{
-     
-                HStack{
+                /*
+                HStack {
                     
                     
                     Button(action: {
@@ -65,19 +43,20 @@ struct Home: View {
                         
                     }
                     
+                    
                     Spacer()
                     
                     Button(action: {
                         
                     }) {
-                        Image(systemName: "person")
-                        .resizable()
-                        .renderingMode(.original)
-                        .frame(width: 22, height: 24)
+                        Image(systemName: "person").resizable().renderingMode(.original).frame(width: 22, height: 24)
+                        
                     }
-                }
                 
-                Text("Missions")
+                    
+                }
+                */
+                Text("Missões")
                     .font(.title)
                     .fontWeight(.bold)
                 
@@ -111,7 +90,7 @@ struct Home: View {
 }
 
 
-struct Card: View{
+struct Card: View {
     
     var data: Type
     
@@ -143,7 +122,7 @@ struct Card: View{
     
 }
 
-struct MainView: View{
+struct MainView: View {
     
     
     var data: [Type]
@@ -188,7 +167,7 @@ struct MainView: View{
                                     }
                         
                     }
-                .padding()
+                    .padding()
                     
                 }
             }
@@ -197,7 +176,19 @@ struct MainView: View{
 }
 
 struct Type {
-    
     var name: String
     var pic: String
+}
+
+
+
+struct MissoesScreen: View {
+    var body: some View {
+        Home()
+    }
+}
+struct MissoesScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        MissoesScreen()
+    }
 }
