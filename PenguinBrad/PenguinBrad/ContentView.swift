@@ -13,20 +13,19 @@ struct ContentView: View {
     //MARK: Colocando cor na Tab Bar
     //Pelo amor de Deus mudar!
     
-    init (){
-        UITabBar.appearance().backgroundColor = UIColor.cyan
-    }
     var body: some View {
         
         //MARK: Construção da Tab Bar
         //Imagens da Tab Bar estou pegando o nome no SF Symbols (Baixei, recomendado pela Carol)
         //To achando os icones muito pequenos, péssima Acessibilidade
         
+        //UITabBar.appearance().backgroundColor = UIColor.cyan
+        
         TabView{
             MissoesScreen().tabItem({ //Redireciona o usuário a tela pelo botão
                 Image(systemName: "paintbrush.fill").font(.none)
                 Text("Missões")
-                }).tag(0) //Ordem dos Elementos na Tab Bar
+                }).tag(0)//Ordem dos Elementos na Tab Bar
             WebKitCell().tabItem({ //Redireciona o usuário a tela pelo botão
                 Image(systemName: "person.3.fill")
                 Text("Comunidade")
@@ -45,3 +44,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+
