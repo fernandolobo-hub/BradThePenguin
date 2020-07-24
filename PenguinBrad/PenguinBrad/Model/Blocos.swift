@@ -1,5 +1,5 @@
 //
-//  Blocos.swift
+//  SwiftUIView.swift
 //  PenguinBrad
 //
 //  Created by Bruna Costa on 24/07/20.
@@ -10,7 +10,9 @@ import SwiftUI
 
 struct Blocos: View {
    
-    
+    @State var showingModal = false
+    @State var showingModal2 = false
+    @State var showingModal3 = false
     var body: some View {
         
 
@@ -21,10 +23,32 @@ struct Blocos: View {
                         Rectangle().frame(height: 40)//.frame(minWidth: 1332, maxWidth: .infinity, minHeight: 100, idealHeight: 50, maxHeight: 50, alignment: .bottomLeading)
                             .foregroundColor(Color.white).shadow(radius: 10)//.padding()
                         HStack{
+                            Button(action: {
+                                self.showingModal.toggle()
+                                print("esse")
+                            }) {
+                                Image(systemName: "info.circle").fixedSize().padding()
+                                }.sheet(isPresented: $showingModal) {
+                                    InfoView()
+                                    
+                            }
+                            Button(action: {
+                                self.showingModal2.toggle()
+                                print("bra")
+                            }) {
+                                Image(systemName: "play.fill").fixedSize().padding()
+                                }.sheet(isPresented: $showingModal2) {
+                                    PlayView()
+                            }
+                            Button(action: {
+                                self.showingModal3.toggle()
+                            }) {
+                                Image(systemName: "list.dash").fixedSize().padding()
+                                }.sheet(isPresented: $showingModal3) {
+                                    ListView()
+                            }
+
                             
-                            Image(systemName: "play.fill").fixedSize().padding()
-                            
-                            Image(systemName: "list.dash").padding()
                         }
                     }
                     ZStack{
@@ -61,7 +85,7 @@ struct Blocos: View {
 
             }.aspectRatio(0.5, contentMode: .fit).minimumScaleFactor(0.1)//.padding()
                 
-            
+
     }
 }
 
