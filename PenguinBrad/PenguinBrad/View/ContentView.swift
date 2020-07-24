@@ -34,6 +34,11 @@ struct ContentView: View {
                 Image(systemName: "person.fill").font(.none)
                 Text("Perfil")
                 }).tag(2) //Ordem dos Elementos na Tab Bar
+            Challenges().tabItem({ //Redireciona o usuário a tela pelo botão
+                Image(systemName: "note").font(.none)
+                Text("Challenges")
+                }).tag(3) //Ordem dos Elementos na Tab Bar
+            
             
         }.accentColor(.black) //Mudar Cor dos elementos da Tab Bar
     }
