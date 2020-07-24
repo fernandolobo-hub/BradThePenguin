@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24A928D524CB023D0087D944 /* MainMissao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A928D424CB023D0087D944 /* MainMissao.swift */; };
-		24A928D724CB02910087D944 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A928D624CB02910087D944 /* CollectionViewCell.swift */; };
-		24A928D924CB029E0087D944 /* SetUpCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A928D824CB029E0087D944 /* SetUpCollection.swift */; };
 		24A928DB24CB03B90087D944 /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A928DA24CB03B90087D944 /* Challenges.swift */; };
 		24A928DD24CB03D80087D944 /* ChallengeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A928DC24CB03D80087D944 /* ChallengeData.swift */; };
 		24CE34CD24C768B6007C648C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CE34CC24C768B6007C648C /* AppDelegate.swift */; };
@@ -22,12 +19,11 @@
 		F1B70F3024C76EB400187CBE /* MissoesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B70F2F24C76EB400187CBE /* MissoesScreen.swift */; };
 		F1B70F3424C7707C00187CBE /* PerfilScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B70F3324C7707C00187CBE /* PerfilScreen.swift */; };
 		F1B70F3624C7752800187CBE /* WebKitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B70F3524C7752800187CBE /* WebKitCell.swift */; };
+		F1EF0A8024CB4AA000055CE7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A7F24CB4AA000055CE7 /* CollectionViewCell.swift */; };
+		F1EF0A8424CB4AFE00055CE7 /* Blocos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A8324CB4AFE00055CE7 /* Blocos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24A928D424CB023D0087D944 /* MainMissao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMissao.swift; path = ../../../../../../Downloads/MainMissao.swift; sourceTree = "<group>"; };
-		24A928D624CB02910087D944 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = ../../../../../../Downloads/CollectionViewCell.swift; sourceTree = "<group>"; };
-		24A928D824CB029E0087D944 /* SetUpCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetUpCollection.swift; path = ../../../../../../Downloads/SetUpCollection.swift; sourceTree = "<group>"; };
 		24A928DA24CB03B90087D944 /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
 		24A928DC24CB03D80087D944 /* ChallengeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeData.swift; sourceTree = "<group>"; };
 		24CE34C924C768B6007C648C /* PenguinBrad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinBrad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +38,8 @@
 		F1B70F2F24C76EB400187CBE /* MissoesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissoesScreen.swift; sourceTree = "<group>"; };
 		F1B70F3324C7707C00187CBE /* PerfilScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilScreen.swift; sourceTree = "<group>"; };
 		F1B70F3524C7752800187CBE /* WebKitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitCell.swift; sourceTree = "<group>"; };
+		F1EF0A7F24CB4AA000055CE7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F1EF0A8324CB4AFE00055CE7 /* Blocos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +58,11 @@
 			children = (
 				24A928DC24CB03D80087D944 /* ChallengeData.swift */,
 				24A928DA24CB03B90087D944 /* Challenges.swift */,
-				24A928D624CB02910087D944 /* CollectionViewCell.swift */,
-				24A928D424CB023D0087D944 /* MainMissao.swift */,
+				F1EF0A7F24CB4AA000055CE7 /* CollectionViewCell.swift */,
 				F1B70F2F24C76EB400187CBE /* MissoesScreen.swift */,
 				F1B70F3324C7707C00187CBE /* PerfilScreen.swift */,
-				24A928D824CB029E0087D944 /* SetUpCollection.swift */,
 				F1B70F3524C7752800187CBE /* WebKitCell.swift */,
+				F1EF0A8324CB4AFE00055CE7 /* Blocos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,15 +194,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1EF0A8424CB4AFE00055CE7 /* Blocos.swift in Sources */,
 				F12CE50924C8AEA600EBF4A6 /* TelaContentViewNova.swift in Sources */,
 				24A928DB24CB03B90087D944 /* Challenges.swift in Sources */,
 				F1B70F3424C7707C00187CBE /* PerfilScreen.swift in Sources */,
-				24A928D724CB02910087D944 /* CollectionViewCell.swift in Sources */,
-				24A928D924CB029E0087D944 /* SetUpCollection.swift in Sources */,
 				24CE34CD24C768B6007C648C /* AppDelegate.swift in Sources */,
 				F1B70F3024C76EB400187CBE /* MissoesScreen.swift in Sources */,
 				24A928DD24CB03D80087D944 /* ChallengeData.swift in Sources */,
-				24A928D524CB023D0087D944 /* MainMissao.swift in Sources */,
+				F1EF0A8024CB4AA000055CE7 /* CollectionViewCell.swift in Sources */,
 				24CE34CF24C768B6007C648C /* SceneDelegate.swift in Sources */,
 				24CE34D124C768B6007C648C /* ContentView.swift in Sources */,
 				F1B70F3624C7752800187CBE /* WebKitCell.swift in Sources */,

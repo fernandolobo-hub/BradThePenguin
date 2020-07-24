@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     
     //MARK: Colocando cor na Tab Bar
-    //Pelo amor de Deus mudar!
     
     var body: some View {
         
@@ -22,8 +21,9 @@ struct ContentView: View {
         //UITabBar.appearance().backgroundColor = UIColor.cyan
         
         TabView{
+
             MissoesScreen().tabItem({ //Redireciona o usuário a tela pelo botão
-                Image(systemName: "paintbrush.fill").font(.none)
+                Image(systemName: "house.fill").font(.none)
                 Text("Missões")
                 }).tag(0)//Ordem dos Elementos na Tab Bar
             WebKitCell().tabItem({ //Redireciona o usuário a tela pelo botão
@@ -35,13 +35,13 @@ struct ContentView: View {
                 Text("Perfil")
                 }).tag(2) //Ordem dos Elementos na Tab Bar
             Challenges().tabItem({ //Redireciona o usuário a tela pelo botão
-                Image(systemName: "note").font(.none)
+                Image(systemName: "paintbrush.fill").font(.none)
                 Text("Challenges")
                 }).tag(3) //Ordem dos Elementos na Tab Bar
             
             
         }.accentColor(.black) //Mudar Cor dos elementos da Tab Bar
-    }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {

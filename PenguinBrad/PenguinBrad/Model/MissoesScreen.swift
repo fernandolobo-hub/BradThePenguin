@@ -27,7 +27,7 @@ struct MissoesScreen: View {
                     ForEach(matrix, id: \.self) { line in
                         HStack{
                             ForEach(line, id: \.self) { column in
-                                NavigationLink(destination: SetUpCollection()){
+                                NavigationLink(destination: Blocos()){
                                     CollectionViewCell(text: column)
                                 }
                                 
