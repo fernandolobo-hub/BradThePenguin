@@ -37,7 +37,7 @@ struct ContentView: View {
             Challenges().tabItem({ //Redireciona o usuário a tela pelo botão
                 Image(systemName: "paintbrush.fill").font(.none)
                 Text("Challenges")
-                }).tag(3) //Ordem dos Elementos na Tab Bar
+            }).tag(3)//Ordem dos Elementos na Tab Bar
             
             
         }.accentColor(.black) //Mudar Cor dos elementos da Tab Bar
