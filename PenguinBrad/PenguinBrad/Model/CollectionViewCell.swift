@@ -5,9 +5,6 @@
 //  Created by Bruna Costa on 24/07/20.
 //  Copyright © 2020 Fernando Lobo. All rights reserved.
 //
-
-import SwiftUI
-
 import SwiftUI
 
 struct CollectionViewCell: View {
@@ -17,22 +14,10 @@ struct CollectionViewCell: View {
     
     var body: some View {
         ZStack{
+    
+            Image(text).resizable().aspectRatio( contentMode: .fit)
             
-                
-            Image("greenMission").resizable().aspectRatio(1, contentMode: .fit).overlay(Text("Aceitar")
-            .foregroundColor(.white).fontWeight(.bold).font(.custom("Avenir Next", size: 20))
-                .frame(width: (UIScreen.main.bounds.width - 70) / 2)
-            .padding(.vertical, 10).background(Color.black)
-            .cornerRadius(10)
-                .shadow(radius: 6).padding(.top, 70))
-                
-                //.aspectRatio(contentMode: .fit)
-                
-                
-            
-           // }.padding()
-            
-        }.padding()
+        }.padding(.bottom, 5).padding([.leading,.trailing])
         
     }
     
@@ -42,6 +27,6 @@ struct CollectionViewCell: View {
 
 struct CollectionViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionViewCell(text: "Ativo_1")
+        CollectionViewCell(text: "Ativo_7")
     }
 }
