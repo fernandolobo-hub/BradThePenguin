@@ -26,7 +26,7 @@ struct ContentView: View {
                 Image(systemName: "house.fill").font(.none)
                 Text("Missões")
                 }).tag(0)//Ordem dos Elementos na Tab Bar
-            WebKitCell().tabItem({ //Redireciona o usuário a tela pelo botão
+            ContentView2().tabItem({ //Redireciona o usuário a tela pelo botão
                 Image(systemName: "person.3.fill")
                 Text("Comunidade")
                 }).tag(1) //Ordem dos Elementos na Tab Bar//Ordem dos Elementos na Tab Bar
