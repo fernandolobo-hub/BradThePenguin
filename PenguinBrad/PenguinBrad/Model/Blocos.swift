@@ -9,15 +9,82 @@
 import SwiftUI
 
 struct Blocos: View {
+    
+    var formats: [Format] = [Format(name: "circle"),
+    Format(name: "triangle"),
+    Format(name: "rectangle"),
+    Format(name: "hexagon")]
    
+    @State var isDragging = false
     @State var showingModal = false
     @State var showingModal2 = false
     @State var showingModal3 = false
+    
+    var drag: some Gesture {
+        DragGesture()
+            .onChanged { _ in self.isDragging = true }
+            .onEnded { _ in self.isDragging = false }
+    }
+    
+    
     var body: some View {
         
 
             ZStack {
                 VStack{
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                        .foregroundColor(Color.white).shadow(radius: 8)//.padding()
+                        HStack{
+                            VStack{
+                            
+                                Text("void setup(){")
+                                .fontWeight(.bold).padding()
+                                Text("Size(300, 300);")
+                                Spacer()
+                                Text("}").fontWeight(.bold).padding(.leading, -40).padding(.top, -50)
+                            }//.padding()
+                            Spacer()
+                        }.padding()
+                    }
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                        .foregroundColor(Color.white).shadow(radius: 8)//.padding()
+                        HStack{
+                            
+                            VStack{
+                                Text("void draw(){")
+                                    
+                                    .fontWeight(.bold)//.padding()
+                                    //Text("circle(150, 150, 50);")
+                                
+                                Spacer()
+                                Text("}").fontWeight(.bold).padding(.leading, -50).padding(.top, 50)
+                            }.padding()
+                            Spacer()
+                        }.padding()
+                    }
+                    
+                    ZStack{
+                        
+                        
+                        
+                        
+                        
+                        Rectangle().frame(minWidth: 100, idealWidth: .infinity, maxWidth: .infinity, minHeight: 40, idealHeight: 95, maxHeight: 50)//.frame(minWidth: 1332, maxWidth: .infinity, minHeight: 100, idealHeight: 50, maxHeight: 50, alignment: .bottomLeading)
+                            .foregroundColor(Color.red).shadow(radius: 10)
+                        .cornerRadius(12)
+                            .edgesIgnoringSafeArea(.all)
+                            .padding()
+                        
+                        
+                        BlocosScrollView(formats: formats)
+                        
+
+                        
+                        
+                    }
+                    
                     ZStack{
                         
                         Rectangle().frame(height: 40)//.frame(minWidth: 1332, maxWidth: .infinity, minHeight: 100, idealHeight: 50, maxHeight: 50, alignment: .bottomLeading)
@@ -51,36 +118,9 @@ struct Blocos: View {
                             
                         }
                     }
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(Color.white).shadow(radius: 8)//.padding()
-                        HStack{
-                            VStack{
-                            
-                                Text("void setup(){")
-                                .fontWeight(.bold).padding()
-                                Spacer()
-                                Text("}").fontWeight(.bold).padding(.leading, -40).padding(.top, -50)
-                            }//.padding()
-                            Spacer()
-                        }.padding()
-                    }
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(Color.white).shadow(radius: 8)//.padding()
-                        HStack{
-                            
-                            VStack{
-                                Text("void setup(){")
-                                    .fontWeight(.bold)//.padding()
-                                Spacer()
-                                Text("}").fontWeight(.bold).padding(.leading, -50).padding(.top, 50)
-                            }.padding()
-                            Spacer()
-                        }.padding()
-                    }
+                    
 
-                }.padding(.bottom, 15)
+                }.padding(.bottom)
                 
 
             }.aspectRatio(0.5, contentMode: .fit).minimumScaleFactor(0.1)//.padding()
@@ -94,3 +134,13 @@ struct Blocos_Previews: PreviewProvider {
         Blocos()
     }
 }
+
+
+
+
+
+
+
+
+
+

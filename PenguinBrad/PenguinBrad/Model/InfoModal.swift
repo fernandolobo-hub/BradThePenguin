@@ -10,7 +10,7 @@ import SwiftUI
 
 struct InfoView: View {
     
-    let dataSentences = BreusonDialogue(["  Olá, me chamo Breuson", "  Ricardo é brabo", "  Vasco da Gama"])
+    let dataSentences = BreusonDialogue(["  Olá, me chamo Breuson, e estou aqui para introduzir para você alguns conceito programação criativa em Processing, vamos lá!", "Primeiro, você deve definir as funções setup e draw como aparecem para você na imagem. A setup é chamada apenas uma vez, enquanto a draw roda constantemente.", "Para desenhar seu primeiro formato, clique no círculo disponibilizado na barra", "A chamada circle(x,y,r) define a posição do eixo x, do eixo y e o raio do seu círculo respectivamente", "Aperte o botão de play para rodar o seu código", "Parabéns, você desenhou seu primeiro formato"])
     @State private var currentDialogue: String = ""
     @State private var tapped: Bool = false
     @State private var draggedOffset: CGSize = CGSize.zero
@@ -46,7 +46,7 @@ struct InfoView: View {
                             
                             }
                             
-                            //Spacer()
+                            
                         }.padding()
                     }.onAppear{
                         self.currentDialogue = self.dataSentences.current

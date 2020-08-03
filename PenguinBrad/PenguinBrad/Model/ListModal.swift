@@ -39,15 +39,15 @@ struct ListView: View {
                 VStack{
 
                 HStack{
-                    Rectangle().frame(width: 200, height: 80).foregroundColor(Color.white).border(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), width: 2).overlay(Text("Aqui seria os blocos")).shadow(radius: 3).padding().onTapGesture {
+                    Rectangle().frame(width: 200, height: 80).foregroundColor(Color.white).border(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), width: 2).overlay(Text("Aqui seriam os blocos")).shadow(radius: 3).padding().onTapGesture {
                     self.presentationMode.wrappedValue.dismiss()}
 
 
-                    Rectangle().frame(width: 200, height: 80).foregroundColor(Color.white).border(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), width: 2).shadow(radius: 3).overlay(Text("Aqui seria os blocos")).onTapGesture {
+                    Rectangle().frame(width: 200, height: 80).foregroundColor(Color.white).border(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), width: 2).shadow(radius: 3).overlay(Text("Aqui seriam os blocos")).onTapGesture {
                     self.presentationMode.wrappedValue.dismiss()}
                     
                     
-                    Rectangle().frame(width: 200, height: 80).foregroundColor(Color.white).border(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), width: 2).shadow(radius: 3).overlay(Text("Aqui seria os blocos")).padding().onTapGesture {
+                    Rectangle().frame(width: 200, height: 80).foregroundColor(Color.white).border(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), width: 2).shadow(radius: 3).overlay(Text("Aqui seriam os blocos")).padding().onTapGesture {
                     self.presentationMode.wrappedValue.dismiss()}
                     
                 }
