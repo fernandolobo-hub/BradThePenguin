@@ -40,7 +40,7 @@ struct InfoView: View {
                                 Button(action: {
                                     self.currentDialogue = self.dataSentences.next
                                 }) {
-                                    Image(systemName: "heart.fill")
+                                    Image(systemName: "heart.fill").foregroundColor(Color.pink)
                                     
                                 }
                             
@@ -52,7 +52,7 @@ struct InfoView: View {
                         self.currentDialogue = self.dataSentences.current
                     }
 
-                }.frame(width: 300, height: 400).foregroundColor(Color.white).shadow(radius: 5).padding(.bottom, 250)
+                }.frame(width: 300, height: 400).foregroundColor(Color.white).padding(.bottom, 250)
                 
                 Circle().foregroundColor(Color.white).frame(width: 20, height: 20).padding(.top, 200)
                 Circle().foregroundColor(Color.white).frame(width: 15, height: 15).padding(.top, 250).padding(.trailing, 30)
