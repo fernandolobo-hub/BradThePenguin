@@ -32,13 +32,13 @@ struct BlocosScrollView: View {
             
             
             
-            
+            /*
             Rectangle().frame(minWidth: 100, idealWidth: .infinity, maxWidth: .infinity, minHeight: 40, idealHeight: 95, maxHeight: 50)//.frame(minWidth: 1332, maxWidth: .infinity, minHeight: 100, idealHeight: 50, maxHeight: 50, alignment: .bottomLeading)
                 .foregroundColor(Color.red).shadow(radius: 10)
                 .cornerRadius(12)
                 .edgesIgnoringSafeArea(.all)
                 //.padding()
-            
+            */
             
             
             
@@ -57,7 +57,7 @@ struct BlocosScrollView: View {
                         HStack{
                             
                             
-                            Spacer()
+                            //Spacer()
                             VStack{
                                 Image(systemName: format.name)
                                     .offset(CGSize.zero)
@@ -72,15 +72,15 @@ struct BlocosScrollView: View {
                             
                             
                             
-                        }.padding(30)
+                            }.padding()
                         
                     }
                     
                     
                     
-                }
+                }//.padding()
             }
-            .padding(.vertical)
+            //.padding(.vertical)
         }
     }
 }

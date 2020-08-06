@@ -13,12 +13,8 @@ import SwiftUI
 struct MissoesScreen: View {
     
     
-    var matrix:[[String]] = [["Ativo_1","Ativo_1"],
-                             ["Ativo_3","Ativo_4"],
-                             ["Ativo_1","Ativo_1"],
-                             ["Ativo_3","Ativo_4"]]
-    
-    var matrix2:[String] = ["Ativo_7", "Ativo_7","Ativo_7","Ativo_7","Ativo_7","Ativo_7"]
+
+    var matrix2:[String] = ["Missao2", "Ativo_7","Missao1","Ativo_8","Ativo_8"]
     
     
     var body: some View {
@@ -41,8 +37,10 @@ struct MissoesScreen: View {
                     }
                 }.navigationBarTitle("Missões")
             }
-        }.navigationViewStyle(StackNavigationViewStyle())
-                }}}
+                }.background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.5)).navigationViewStyle(StackNavigationViewStyle())
+            }}
+        
+    }
 }
     //}
 
