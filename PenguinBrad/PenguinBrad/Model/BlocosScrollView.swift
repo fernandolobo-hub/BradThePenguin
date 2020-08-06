@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+/*
 struct Format: Identifiable {
     
     var id = UUID()
@@ -18,11 +18,14 @@ struct Format: Identifiable {
 
     
 }
-
+*/
 
 struct BlocosScrollView: View {
     
-    let formats: [Format]
+    //let formats: [Format]
+    @State private var dragAmount = CGSize.zero
+    let formas : String
+    let colores : Color
     
     var body: some View {
         
@@ -46,51 +49,47 @@ struct BlocosScrollView: View {
             
             
             
-            ScrollView(.horizontal, showsIndicators: false){
+            //ScrollView(.horizontal, showsIndicators: false){
                 
                 
                 HStack{
                     
+                    Spacer()
+                    Image(systemName: formas).frame(width: 40, height: 40).foregroundColor(colores).padding()
+                    Spacer()
+                    }.offset(dragAmount)
+                        .zIndex(dragAmount == .zero ? 0 :1 )
+                        //.shadow(color: dragColor, radius: dragAmount == .zero ? 0 : 10)
+                        .gesture(
+                            DragGesture(coordinateSpace: .global)
+                                .onChanged{                        self.dragAmount = CGSize(width: $0.translation.width, height: $0.translation.height)
+                                }
+                                .onEnded{_ in
+                                    self.dragAmount = .zero
+                                }
+                    )
                     
-                    
-                    ForEach(formats, id: \.id) { format in
-                        HStack{
+                                
+                            //}
                             
                             
-                            //Spacer()
-                            VStack{
-                                Image(systemName: format.name)
-                                    .offset(CGSize.zero)
-                                    .scaledToFit()
-                                
-                                    
-                                
-                                
-                                Text(format.name).font(.custom("Avenir", size: 12))
-                                
+                            
                             }
-                            
-                            
-                            
-                            }.padding()
                         
                     }
                     
                     
                     
                 }//.padding()
-            }
+           // }
             //.padding(.vertical)
-        }
-    }
-}
+     //   }
+    //}
+//}
 
 struct BlocosScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        BlocosScrollView(formats: [Format(name: "circle"),
-                                   Format(name: "triangle"),
-                                   Format(name: "rectangle"),
-                                   Format(name: "hexagon")])
+        BlocosScrollView(formas: "circle.fill", colores: .yellow)
     }
 }
 

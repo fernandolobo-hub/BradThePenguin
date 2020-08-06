@@ -10,21 +10,14 @@ import SwiftUI
 
 struct Blocos: View {
     
-    var formats: [Format] = [Format(name: "circle"),
-    Format(name: "triangle"),
-    Format(name: "rectangle"),
-    Format(name: "hexagon")]
-   
+    let formas = ["circle.fill","triangle.fill","rectangle.fill"]
+    let coresChoice = [Color.blue, Color.yellow, Color.black]
     @State var isDragging = false
     @State var showingModal = false
     @State var showingModal2 = false
     @State var showingModal3 = false
     
-    var drag: some Gesture {
-        DragGesture()
-            .onChanged { _ in self.isDragging = true }
-            .onEnded { _ in self.isDragging = false }
-    }
+ 
     
     
     var body: some View {
@@ -78,10 +71,12 @@ struct Blocos: View {
                             .foregroundColor(Color.white).shadow(radius: 5)
                         .cornerRadius(12)
                             .edgesIgnoringSafeArea(.all)
-                            
-                        
-                        
-                        BlocosScrollView(formats: formats)
+                    HStack{
+                        ForEach (0..<3) { i in
+                            BlocosScrollView(formas: self.formas[i], colores: self.coresChoice[i])
+                        }
+                        }.padding()
+                        //BlocosScrollView(formats: formats)
                         
 
                         
