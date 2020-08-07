@@ -16,14 +16,14 @@ struct Blocos: View {
     @State var showingModal = false
     @State var showingModal2 = false
     @State var showingModal3 = false
-    
- 
+    @State var setUpText: [String] = ["void setup(){", "a", "b"]
+    //NSAttributedString
     
     
     var body: some View {
         
         ZStack{
-            Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.5).edgesIgnoringSafeArea(.all)
+            Color(#colorLiteral(red: 0.3618335128, green: 0.7393795848, blue: 0.869068265, alpha: 1)).opacity(5).edgesIgnoringSafeArea(.all)
             ZStack {
                 VStack{
                     ZStack{
@@ -34,16 +34,23 @@ struct Blocos: View {
                         Spacer()
                         HStack{
                             VStack{
-                            
-                                Text("void setup(){").font(.custom("Avenir Next", size: 17))
-                                .fontWeight(.bold).padding()
-                                Spacer()
+                                ForEach (setUpText, id: \.self){ item in
+                                    
+                                    Text(item).font(.custom("Avenir Next", size: 17))
+                                    .fontWeight(.bold).padding()
+                                    
+                                }
+                                //Spacer(minLength: 50)
+
+                                Text("}").font(.custom("Avenir Next", size: 17)).fontWeight(.bold).padding(.leading, -40).padding(.top, -30)
+                                Spacer(minLength: 50)
+                               /*                                 Spacer()
                                 Text("}").font(.custom("Avenir Next", size: 17)).fontWeight(.bold).padding(.leading, -40).padding(.top, -30).padding(.bottom, 10)
                                 Text("void draw(){").font(.custom("Avenir Next", size: 17)).fontWeight(.bold).padding()
                                 //Text("Size(300, 300);")
                                 Spacer()
                                 Text("}").font(.custom("Avenir Next", size: 17)).fontWeight(.bold).padding(.leading, -40).padding(.top, -30)
-                            }//.padding()
+                                }*/}//.padding()
                             Spacer()
                         }//.padding()
                     }
@@ -78,7 +85,7 @@ struct Blocos: View {
                        
                     HStack{
                         ForEach (0..<3) { i in
-                            BlocosScrollView(formas: self.formas[i], colores: self.coresChoice[i])
+                            BlocoCommand(formas: self.formas[i], colores: self.coresChoice[i])
                         }
                         }.padding()
                         //BlocosScrollView(formats: formats)

@@ -20,12 +20,13 @@ struct Format: Identifiable {
 }
 */
 
-struct BlocosScrollView: View {
+struct BlocoCommand: View {
     
     //let formats: [Format]
     @State private var dragAmount = CGSize.zero
     let formas : String
     let colores : Color
+    //@Binding var dropped : BlocosScrollView?
     
     var body: some View {
         
@@ -42,13 +43,7 @@ struct BlocosScrollView: View {
                 .edgesIgnoringSafeArea(.all)
                 //.padding()
             */
-            
-            
-            
-            
-            
-            
-            
+
             //ScrollView(.horizontal, showsIndicators: false){
                 
                 
@@ -62,9 +57,11 @@ struct BlocosScrollView: View {
                         //.shadow(color: dragColor, radius: dragAmount == .zero ? 0 : 10)
                         .gesture(
                             DragGesture(coordinateSpace: .global)
-                                .onChanged{                        self.dragAmount = CGSize(width: $0.translation.width, height: $0.translation.height)
+                                .onChanged{
+                                    self.dragAmount = CGSize(width: $0.translation.width, height: $0.translation.height)
                                 }
                                 .onEnded{_ in
+                                    
                                     self.dragAmount = .zero
                                 }
                     )
@@ -89,7 +86,7 @@ struct BlocosScrollView: View {
 
 struct BlocosScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        BlocosScrollView(formas: "circle.fill", colores: .yellow)
+        BlocoCommand(formas: "circle.fill", colores: .yellow)
     }
 }
 
