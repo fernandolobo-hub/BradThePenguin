@@ -18,9 +18,10 @@ struct MissoesScreen: View {
     
     
     var body: some View {
+
         NavigationView{
-            
             ScrollView {
+                
                 ZStack{
                 ZStack{
 
@@ -37,11 +38,11 @@ struct MissoesScreen: View {
                     }
                 }.navigationBarTitle("Missões")
             }
-                }.background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.5)).navigationViewStyle(StackNavigationViewStyle())
+                }//.background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.5)).navigationViewStyle(StackNavigationViewStyle())
             }}
         
-    }
-}
+        }}
+
     //}
 
 

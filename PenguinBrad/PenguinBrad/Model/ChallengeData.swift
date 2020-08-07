@@ -19,8 +19,8 @@ struct Challenge: Identifiable{
     
 }
 
-let challengeData: [Challenge] = [Challenge(name: "Introduction to Processing", topic: "Functions draw and setup", imageName: "baloon"),
-                                  Challenge(name: "Drawing your first formats", topic: "Formats", imageName: "code"),
+let challengeData: [Challenge] = [Challenge(name: "Introduction to Processing", topic: "Functions draw and setup", imageName: "Elipse1"),
+                                  Challenge(name: "Drawing your first formats", topic: "Formats", imageName: "Elipse2"),
                                   Challenge(name: "Filling with color", topic: "Function fill", imageName: "code"),
                                   Challenge(name: "Drawing red baloons", topic: "CHALLENGE", imageName: "baloon"),]
 

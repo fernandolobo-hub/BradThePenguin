@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct Challenges: View {
+
     
     var body: some View {
         
@@ -19,30 +20,44 @@ struct Challenges: View {
                 
                 List(challengeData){ challenge in
                     VStack{
+                        Spacer()
                         HStack(alignment: .top){
                             Image(challenge.imageName)
                             .resizable()
-                            .frame(width: 80, height: 90, alignment: .trailing)
-                                .overlay(Rectangle().stroke(Color.secondary, lineWidth: 1)).padding(.top, 10)
+                            .frame(width: 40, height: 40, alignment: .trailing) //80,90
+                                //.overlay(Rectangle().stroke(Color.secondary, lineWidth: 1))
+                                .padding(.top, 10)
                             VStack(alignment: .leading){
-                                Text(challenge.name).font(.system(size: 20, weight: .bold, design: .default)).minimumScaleFactor(0.5)
-                                Text(challenge.topic).font(.system(size: 16, weight: .semibold, design: .default)).minimumScaleFactor(0.5)
+                                Text(challenge.name).font(.custom("Avenir Next", size: 17)).minimumScaleFactor(0.5)
+                                    //.font(.system(size: 18, weight: .bold, design: .default))
+                                Text(challenge.topic).font(.custom("Avenir Next", size: 17)).minimumScaleFactor(0.5)
+                                    //.font(.system(size: 16, weight: .semibold, design: .default)))
                                     .foregroundColor(.secondary)
+                                
                             }.navigationBarTitle("Challenges").font(.title).padding(.top, 10).padding(.leading, 5)
                             Spacer()
+                            Image(systemName: "chevron.right").font(.custom("Avenir Next", size: 17)).minimumScaleFactor(0.5).padding()
+                            
+                                //.font(.system(size: 18, design: .default)).minimumScaleFactor(0.5).padding()
+                        }
+                     Spacer()
+                    }
+                }
+                
+                        .onAppear {
+                         UITableView.appearance().separatorStyle = .none
                         }
                         NavigationLink(destination: Text("Instructions")) {
                             EmptyView()
                         }.buttonStyle(PlainButtonStyle())
                     }
                     
-                }
+        }
                 
             }
 
         }
-    }
-}
+    
 
 
 struct Challenges_Previews: PreviewProvider {

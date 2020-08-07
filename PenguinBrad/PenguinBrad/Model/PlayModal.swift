@@ -15,13 +15,14 @@ struct PlayView: View {
     var body: some View {
         ZStack{
             Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.5).edgesIgnoringSafeArea(.all)
-            RoundedRectangle(cornerRadius: 40).foregroundColor(Color.white).shadow(radius: 5).frame(width: 350, height: 600).padding(.top, 100)
+            RoundedRectangle(cornerRadius: 40).foregroundColor(Color.white).shadow(radius: 3).frame(width: 350, height: 600).padding(.top, 100)
             
-            Circle().foregroundColor(Color.blue).frame(width: 100, height: 100).padding(.leading, 200)
+            
+            Circle().foregroundColor(Color.red).frame(width: 100, height: 100).padding(.leading, 200)
             Rectangle().frame(width: 150, height: 100).padding(.top, 400)
             VStack{
                 Text("Seu desenho:")
-                    .font(.largeTitle)
+                    .font(.custom("Avenir Next", size: 40))
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center).foregroundColor(Color.black).padding(.top)
                 Spacer()
