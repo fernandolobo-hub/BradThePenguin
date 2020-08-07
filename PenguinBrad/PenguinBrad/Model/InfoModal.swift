@@ -27,7 +27,7 @@ struct InfoView: View {
                 Group {
                     
                     ZStack{
-                        RoundedRectangle(cornerRadius: 30)
+                        RoundedRectangle(cornerRadius: 30).shadow(radius: 2)
                         VStack {
                             HStack {
                                 Text(currentDialogue).foregroundColor(Color.black).font(.custom("Avenir Next", size: 20))
@@ -40,8 +40,10 @@ struct InfoView: View {
                                 Button(action: {
                                     self.currentDialogue = self.dataSentences.next
                                 }) {
+                                    ZStack{
+                                        Circle().foregroundColor(Color.white).frame(width: 30, height: 30).shadow(radius: 3)
                                     Image(systemName: "heart.fill").foregroundColor(Color.pink)
-                                    
+                                    }
                                 }
                             
                             }
