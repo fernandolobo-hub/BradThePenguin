@@ -23,12 +23,15 @@ struct Blocos: View {
     var body: some View {
         
         ZStack{
-            Color(#colorLiteral(red: 0.3618335128, green: 0.7393795848, blue: 0.869068265, alpha: 1)).opacity(5).edgesIgnoringSafeArea(.all)
+            Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)).opacity(0.15).edgesIgnoringSafeArea(.all)
             ZStack {
+                
                 VStack{
+                    
                     ZStack{
+                        
                         Rectangle()
-                            .foregroundColor(Color.white).cornerRadius(20)
+                            .foregroundColor(Color.white).cornerRadius(20).shadow(radius: 3)
                             //.border(Color.black, width: 2)//.shadow(radius: 8)//.padding()
                         
                         Spacer()

@@ -14,7 +14,7 @@ struct PlayView: View {
     
     var body: some View {
         ZStack{
-            Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.5).edgesIgnoringSafeArea(.all)
+            Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)).opacity(0.15).edgesIgnoringSafeArea(.all)
             RoundedRectangle(cornerRadius: 40).foregroundColor(Color.white).shadow(radius: 3).frame(width: 350, height: 600).padding(.top, 100)
             
             
