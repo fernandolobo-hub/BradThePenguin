@@ -19,7 +19,11 @@ struct Challenges: View {
             NavigationView{
                 
                 List(challengeData){ challenge in
+                    
                     VStack{
+                        NavigationLink(destination: ChallengeInstructions()) {
+                            EmptyView()
+                        }.buttonStyle(PlainButtonStyle())
                         Spacer()
                         HStack(alignment: .top){
                             Image(challenge.imageName)
@@ -47,9 +51,7 @@ struct Challenges: View {
                         .onAppear {
                          UITableView.appearance().separatorStyle = .none
                         }
-                        NavigationLink(destination: Text("Instructions")) {
-                            EmptyView()
-                        }.buttonStyle(PlainButtonStyle())
+                        
                     }
                     
         }
