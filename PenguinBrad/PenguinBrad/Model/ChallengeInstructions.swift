@@ -17,16 +17,17 @@ struct ChallengeInstructions: View {
         VStack {
             Spacer()
             HStack {
-                Text(ChallengeContentData[0].title).font(.title)
+                Spacer()
+                Text(ChallengeContentData[0].title).font(.title).fontWeight(.bold)
                 Spacer()
             }
             Spacer()
             Text("Apresentação").font(.title)
             
-            Text(ChallengeContentData[0].presentation).font(.custom("Avenir", size: 20))
+            Text(ChallengeContentData[0].presentation).font(.custom("Avenir", size: 20)).padding()
             Spacer()
             Text("Instruções").font(.title)
-            Text(ChallengeContentData[0].instructions).font(.custom("Avenir", size: 20))
+            Text(ChallengeContentData[0].instructions).font(.custom("Avenir", size: 20)).padding()
             Spacer()
             
             Button(action: {

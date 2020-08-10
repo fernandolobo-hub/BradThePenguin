@@ -28,7 +28,7 @@ struct Challenges: View {
                         HStack(alignment: .top){
                             Image(challenge.imageName)
                             .resizable()
-                            .frame(width: 40, height: 40, alignment: .trailing) //80,90
+                                .frame(width: 40, height: 40, alignment: .trailing).padding() //80,90
                                 //.overlay(Rectangle().stroke(Color.secondary, lineWidth: 1))
                                 .padding(.top, 10)
                             VStack(alignment: .leading){

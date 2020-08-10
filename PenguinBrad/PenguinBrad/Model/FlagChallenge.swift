@@ -11,7 +11,7 @@ import SwiftUI
 struct FlagChallenge: View {
     var body: some View {
         VStack{
-            Text("Possível Resultado esperado").font(.title)
+            Text("Possível Resultado esperado").font(.title).padding()
             Image("franceflag").resizable().aspectRatio(contentMode: .fit)
             Spacer()
             Text("Possível Resolução de código").font(.title)
