@@ -12,22 +12,24 @@ struct ChallengeInstructions: View {
     
     @State var showChallenge = false
     
+    var challenge: Challenge
+    
     var body: some View {
         
         VStack {
             Spacer()
             HStack {
                 Spacer()
-                Text(ChallengeContentData[0].title).font(.title).fontWeight(.bold)
+                Text(challenge.title).font(.title).fontWeight(.bold)
                 Spacer()
             }
             Spacer()
             Text("Apresentação").font(.title)
             
-            Text(ChallengeContentData[0].presentation).font(.custom("Avenir", size: 20)).padding()
+            Text(challenge.presentation).font(.custom("Avenir", size: 20)).padding()
             Spacer()
             Text("Instruções").font(.title)
-            Text(ChallengeContentData[0].instructions).font(.custom("Avenir", size: 20)).padding()
+            Text(challenge.instructions).font(.custom("Avenir", size: 20)).padding()
             Spacer()
             
             Button(action: {
@@ -48,6 +50,6 @@ struct ChallengeInstructions: View {
 
 struct ChallengeInstructions_Previews: PreviewProvider {
     static var previews: some View {
-        ChallengeInstructions()
+        ChallengeInstructions(challenge: challengeData[0])
     }
 }

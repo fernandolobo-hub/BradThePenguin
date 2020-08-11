@@ -12,6 +12,7 @@ import SwiftUI
 struct Challenges: View {
 
     
+    
     var body: some View {
         
         ZStack{
@@ -21,7 +22,9 @@ struct Challenges: View {
                 List(challengeData){ challenge in
                     
                     VStack{
-                        NavigationLink(destination: ChallengeInstructions()) {
+                        
+                        
+                        NavigationLink(destination: ChallengeInstructions(challenge: challenge)) {
                             EmptyView()
                         }.buttonStyle(PlainButtonStyle())
                         Spacer()
@@ -67,49 +70,4 @@ struct Challenges_Previews: PreviewProvider {
         Challenges()
     }
 }
-/*
-import SwiftUI
 
-
-struct Challenges: View {
-    
-    var body: some View {
-        
-        ZStack{
-            
-            NavigationView{
-                
-                List(challengeData){ challenge in
-                    VStack{
-                        HStack(alignment: .top){
-                            VStack(alignment: .leading){
-                                Text(challenge.name).font(.system(size: 20, weight: .bold, design: .default))
-                                Text(challenge.topic).font(.system(size: 16, weight: .semibold, design: .default))
-                                    .foregroundColor(.secondary)
-                            }.navigationBarTitle("Challenges").font(.title)
-                            Spacer()
-                            Image(challenge.imageName)
-                                .resizable()
-                                .frame(width:89, height: 107, alignment: .trailing)
-                                .overlay(Rectangle().stroke(Color.secondary, lineWidth: 1))
-                        }
-                        NavigationLink(destination: Text("Instructions")) {
-                            EmptyView()
-                        }.buttonStyle(PlainButtonStyle())
-                    }
-                    
-                }
-                
-            }
-
-        }
-    }
-}
-
-
-struct Challenges_Previews: PreviewProvider {
-    static var previews: some View {
-        Challenges()
-    }
-}
-*/
