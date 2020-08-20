@@ -18,8 +18,8 @@ struct PlayView: View {
             RoundedRectangle(cornerRadius: 40).foregroundColor(Color.white).shadow(radius: 3).frame(width: 350, height: 600).padding(.top, 100)
             
             
-            Circle().foregroundColor(Color.red).frame(width: 100, height: 100).padding(.leading, 200)
-            Rectangle().frame(width: 150, height: 100).padding(.top, 400)
+            Image("triangulo").aspectRatio(contentMode: .fill)
+            
             VStack{
                 Text("Seu desenho:")
                     .font(.custom("Avenir Next", size: 40))
