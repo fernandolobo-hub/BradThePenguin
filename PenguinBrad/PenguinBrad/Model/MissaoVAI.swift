@@ -67,10 +67,11 @@ struct MissaoVAI: View {
                              }.buttonStyle(PlainButtonStyle()).foregroundColor(Color.blue)
                          
                  }
-                             
+                         Spacer()
+                    Spacer()
                          }
 
-                     }.blur(radius: previewView ? 0 : 6)
+                        }.padding().blur(radius: previewView ? 0 : 6)
                      if !previewView{
                      ZStack{
                          VStack{
@@ -88,11 +89,13 @@ struct MissaoVAI: View {
                          ZStack{
                              RoundedRectangle(cornerRadius: 5).foregroundColor(Color.white).frame(width: 150, height: 30).shadow(radius: 3)
                             Text ("Aceitar Missão").lineLimit(5).padding()
+                             
                         }
                          
-                             }}.padding(.top, 100)
+                             }}
+                            .padding(.top, 50)
                      }
-                         
+                       
                      }
              }
     }
