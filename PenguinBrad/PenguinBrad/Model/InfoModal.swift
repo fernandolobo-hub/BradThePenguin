@@ -10,7 +10,7 @@ import SwiftUI
 
 struct InfoView: View {
     
-    let dataSentences = BreusonDialogue(["  Olá, me chamo Breuson, e estou aqui para introduzir para você alguns conceito programação criativa em Processing, vamos lá!", "Primeiro, você deve definir as funções setup e draw como aparecem para você na imagem. A setup é chamada apenas uma vez, enquanto a draw roda constantemente.", "Para desenhar seu primeiro formato, clique no círculo disponibilizado na barra", "A chamada circle(x,y,r) define a posição do eixo x, do eixo y e o raio do seu círculo respectivamente", "Aperte o botão de play para rodar o seu código", "Parabéns, você desenhou seu primeiro formato"])
+    let dataSentences = BreusonDialogue(["Olá novamente. \nAntes de tudo é indicado que você acompanhe as missões junto com a interface do Processing no computador, executando o código ensinado, se possível. \nTodo código das missões pode ser escrito na interface.","A primeira coisa que devemos fazer é digitar duas funções fundamentais para a construção da nossa cena. São elas as void setup() e a função void draw().","A função void setup() roda apenas uma vez e serve para definir o ambiente em que rodaremos nosso desenho, como o tamanho da tela.","A função void draw() é a função, como o nome diz, que irá desenhar no plano as formas e figuras que quisermos.","Com isso que você aprendeu, tente experimentar e brincar com os conceitos."," O que aconteceria se essas funções estivessem em outro lugar? E se os números mudassem? Não tem problema se der algum erro, use a criatividade! "])
     @State private var currentDialogue: String = ""
     @State private var tapped: Bool = false
     @State private var draggedOffset: CGSize = CGSize.zero
@@ -37,16 +37,33 @@ struct InfoView: View {
                             Spacer()
                             HStack {
                                 Spacer()
+                                if currentDialogue != "Olá novamente. \nAntes de tudo é indicado que você acompanhe as missões junto com a interface do Processing no computador, executando o código ensinado, se possível. \nTodo código das missões pode ser escrito na interface." {
+                                    
+                                Button(action: {
+                                    self.currentDialogue = self.dataSentences.previous
+                                }) {
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 5).foregroundColor(Color.white).frame(width: 70, height: 25).shadow(radius: 2)
+                                    Text("Anterior").foregroundColor(Color.blue)
+                                    }
+                                    }
+                                    Spacer()
+                                }
+                                //Spacer()
+                                if currentDialogue !=  " O que aconteceria se essas funções estivessem em outro lugar? E se os números mudassem? Não tem problema se der algum erro, use a criatividade! "{
                                 Button(action: {
                                     self.currentDialogue = self.dataSentences.next
                                 }) {
                                     ZStack{
-                                        Circle().foregroundColor(Color.white).frame(width: 30, height: 30).shadow(radius: 3)
-                                    Image(systemName: "heart.fill").foregroundColor(Color.pink)
+                                        RoundedRectangle(cornerRadius: 5).foregroundColor(Color.white).frame(width: 70, height: 25).shadow(radius: 2)
+                                    Text("Próximo").foregroundColor(Color.blue)
                                     }
+                                    
                                 }
+                               Spacer()
+
                             
-                            }
+                                }}
                             
                             
                         }.padding()
