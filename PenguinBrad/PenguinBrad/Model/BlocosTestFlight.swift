@@ -23,21 +23,80 @@ struct BlocosTestFlight: View {
     
     var body: some View {
         
-        ZStack{
-            Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)).opacity(0.15).edgesIgnoringSafeArea(.all)
+
             ZStack {
+                Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)).opacity(0.15).edgesIgnoringSafeArea(.all)
                 
                 VStack{
 
                     ZStack{
-                        
                         Rectangle()
-                            .foregroundColor(Color.white).cornerRadius(20).shadow(radius: 3)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(20).shadow(radius: 3)
+                        VStack{
+                        HStack{
+                            Text("void setup() {").fontWeight(.bold).font(.custom("Avenir Next", size: 14)).padding()
+                            Spacer()
+                        }
+                        HStack{
+                            Button(action: {
+                                self.addItem1.toggle()
+                            }) {
+                                ZStack{
+                                    
+                                    if !addItem1 {
+                                        Rectangle().foregroundColor(Color.white).border(Color.black).frame(width: 130, height: 45).shadow(radius: 2).overlay(Text("size (500, 500)").blur(radius: 5)).padding()
+                                    }
+                                    else {
+                                        Text("size (500, 500)").blur(radius: 0).padding(.leading, 10).font(.custom("Avenir Next", size: 14))
+                                    }
+                                    }
+                                    
+                                }
+                            Spacer()
+                        }.padding(.leading, 20)
+                            HStack{
+                                Text("}").fontWeight(.bold).font(.custom("Avenir Next", size: 14)).padding(.leading, 20)
+                                Spacer()
+                            }.padding()
+                            HStack{
+                                Text("void draw() {").font(.custom("Avenir Next", size: 14)).fontWeight(.bold).padding()
+                                Spacer()
+                            }
+                           Button(action: {
+                                self.addItem2.toggle()
+                            }) {
+                                ZStack{
+                                    HStack{
+                                    if addItem2 == true {
+                                        Text("triangle (200,200,300,300,250,200)").foregroundColor(Color.green).font(.custom("Avenir Next", size: 14)).padding(.leading, 20)
+                                    }
+                                    else{
+                                        Rectangle().foregroundColor(Color.white).border(Color.black).frame(width: 130, height: 45).shadow(radius: 2).overlay(
+                                            Image(systemName: "triangle").foregroundColor(Color.green)).padding()
+                                    }
+                                        Spacer()
+                                    }.padding()
+                                }
+                                }.buttonStyle(PlainButtonStyle())
+                            HStack{
+                                Text("}").font(.custom("Avenir Next", size: 14)).fontWeight(.bold).padding(.leading, 20)
+                                Spacer()
+                            }.padding()
+                            Spacer()
+                        }.padding().buttonStyle(PlainButtonStyle())
+                            
+                        
+                        }.padding()
+                        
+                    
+                    
+                      /*
                         HStack{
                             
                             VStack{
                             VStack{
-                                Text("void setup() {").fontWeight(.bold)
+                                Text("void setup() {").fontWeight(.bold).padding()
                                 
                                 VStack{
                                 Button(action: {
@@ -59,8 +118,8 @@ struct BlocosTestFlight: View {
                                 Spacer()
                             Text("}").fontWeight(.bold).padding().padding(.bottom, 30)
                                 
-                                Text("void draw() {").fontWeight(.bold).padding()
-                                                            Button(action: {
+                                Text("void draw() {").fontWeight(.bold).padding(.bottom, 10)
+                                Button(action: {
                                 self.addItem2.toggle()
                             }) {
                                 ZStack{
@@ -83,16 +142,13 @@ struct BlocosTestFlight: View {
                             Spacer()
                         }
                     
-                    }.padding()
+                    }//.padding()
                        
                     
+            */
                         
-                        
-                    
-                    
-                    ZStack{
-                        
-                        HStack{
+                  
+                    HStack{
                             Button(action: {
                                 self.showingModal.toggle()
                                 print("esse")
@@ -114,18 +170,16 @@ struct BlocosTestFlight: View {
                                 }}.sheet(isPresented: $showingModal2) {
                                     PlayView()
                                 }.buttonStyle(PlainButtonStyle()).foregroundColor(Color.blue).padding()
-                            
-
+                }}
                             
                         }
-                    }}
+                    }
+}
                     
 
-                }.padding(.bottom)
+               
                 
-        }
-                }
-        }
+        
 
 
 
