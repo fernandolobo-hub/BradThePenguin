@@ -16,33 +16,46 @@ struct ChallengeInstructions: View {
     
     var body: some View {
         
+        
+        
         VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Text(challenge.title).font(.title).fontWeight(.bold)
-                Spacer()
-            }
-            Spacer()
-            Text("Apresentação").font(.title)
             
-            Text(challenge.presentation).font(.custom("Avenir", size: 20)).padding()
-            Spacer()
-            Text("Instruções").font(.title)
-            Text(challenge.instructions).font(.custom("Avenir", size: 20)).padding()
-            Spacer()
-            
-            Button(action: {
-                self.showChallenge.toggle()
-            }) {
-                ZStack{
-                    
-                    Circle().foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).frame(width: 50, height: 50).shadow(radius: 3).overlay(Image(systemName: "info.circle").fixedSize().padding())
-                    
-                }}.sheet(isPresented: $showChallenge) {
-                    FlagChallenge()
-                    
+            if challenge.imageName == "lock"{
+                
+                Text("Em desenvolvimento").font(.title)
             }
+            
+            else{
+                
+                Spacer()
+                HStack {
+                    Spacer()
+                    Text(challenge.title).font(.title).fontWeight(.bold)
+                    Spacer()
+                }
+                Spacer()
+                Text("Apresentação").font(.title)
+                
+                Text(challenge.presentation).font(.custom("Avenir", size: 20)).padding()
+                Spacer()
+                Text("Instruções").font(.title)
+                Text(challenge.instructions).font(.custom("Avenir", size: 20)).padding()
+                Spacer()
+                
+                Button(action: {
+                    self.showChallenge.toggle()
+                }) {
+                    ZStack{
+                        
+                        Circle().foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).frame(width: 50, height: 50).shadow(radius: 3).overlay(Image(systemName: "info.circle").fixedSize().padding())
+                        
+                    }}.sheet(isPresented: $showChallenge) {
+                        FlagChallenge()
+                        
+                }
+                
+            }
+            
         }
         
     }
@@ -50,6 +63,6 @@ struct ChallengeInstructions: View {
 
 struct ChallengeInstructions_Previews: PreviewProvider {
     static var previews: some View {
-        ChallengeInstructions(challenge: challengeData[0])
+        ChallengeInstructions(challenge: challengeData[1])
     }
 }
