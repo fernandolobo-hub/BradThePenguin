@@ -25,10 +25,10 @@
 		F1B70F3624C7752800187CBE /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B70F3524C7752800187CBE /* SafariView.swift */; };
 		F1C56BDA24EED04E00BA52FA /* BlocosTestFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C56BD924EED04E00BA52FA /* BlocosTestFlight.swift */; };
 		F1C56BDE24EEEECA00BA52FA /* MissaoVAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C56BDD24EEEECA00BA52FA /* MissaoVAI.swift */; };
+		F1C56BE024EF0A8E00BA52FA /* InfoModal2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C56BDF24EF0A8E00BA52FA /* InfoModal2.swift */; };
 		F1EF0A8024CB4AA000055CE7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A7F24CB4AA000055CE7 /* CollectionViewCell.swift */; };
 		F1EF0A8C24CB740D00055CE7 /* Blocos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A8B24CB740D00055CE7 /* Blocos.swift */; };
 		F1EF0A8E24CB749000055CE7 /* PlayModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A8D24CB749000055CE7 /* PlayModal.swift */; };
-		F1EF0A9024CB74A100055CE7 /* ListModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A8F24CB74A100055CE7 /* ListModal.swift */; };
 		F1EF0A9224CB74B500055CE7 /* InfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A9124CB74B500055CE7 /* InfoModal.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,10 +53,10 @@
 		F1B70F3524C7752800187CBE /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		F1C56BD924EED04E00BA52FA /* BlocosTestFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocosTestFlight.swift; sourceTree = "<group>"; };
 		F1C56BDD24EEEECA00BA52FA /* MissaoVAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissaoVAI.swift; sourceTree = "<group>"; };
+		F1C56BDF24EF0A8E00BA52FA /* InfoModal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModal2.swift; sourceTree = "<group>"; };
 		F1EF0A7F24CB4AA000055CE7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F1EF0A8B24CB740D00055CE7 /* Blocos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocos.swift; sourceTree = "<group>"; };
 		F1EF0A8D24CB749000055CE7 /* PlayModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayModal.swift; sourceTree = "<group>"; };
-		F1EF0A8F24CB74A100055CE7 /* ListModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModal.swift; sourceTree = "<group>"; };
 		F1EF0A9124CB74B500055CE7 /* InfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +86,8 @@
 				F1C56BD924EED04E00BA52FA /* BlocosTestFlight.swift */,
 				F1C56BDD24EEEECA00BA52FA /* MissaoVAI.swift */,
 				F1EF0A8D24CB749000055CE7 /* PlayModal.swift */,
-				F1EF0A8F24CB74A100055CE7 /* ListModal.swift */,
 				F1EF0A9124CB74B500055CE7 /* InfoModal.swift */,
+				F1C56BDF24EF0A8E00BA52FA /* InfoModal2.swift */,
 				24DA2CF124D1C28800C703F3 /* breusonTips.swift */,
 				24E1996624D49E5600E843ED /* BlocoCommand.swift */,
 			);
@@ -223,6 +223,7 @@
 			files = (
 				F12CE50924C8AEA600EBF4A6 /* TelaContentViewNova.swift in Sources */,
 				244E04B024DE46BA00BEFF93 /* ChallengeInstructionsData.swift in Sources */,
+				F1C56BE024EF0A8E00BA52FA /* InfoModal2.swift in Sources */,
 				F1C56BDE24EEEECA00BA52FA /* MissaoVAI.swift in Sources */,
 				F1EF0A8E24CB749000055CE7 /* PlayModal.swift in Sources */,
 				F1EF0A8C24CB740D00055CE7 /* Blocos.swift in Sources */,
@@ -240,7 +241,6 @@
 				F1EF0A9224CB74B500055CE7 /* InfoModal.swift in Sources */,
 				24DA2CF224D1C28800C703F3 /* breusonTips.swift in Sources */,
 				244E04AE24DE41CB00BEFF93 /* ChallengeInstructions.swift in Sources */,
-				F1EF0A9024CB74A100055CE7 /* ListModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

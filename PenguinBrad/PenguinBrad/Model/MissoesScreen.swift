@@ -15,6 +15,7 @@ struct MissoesScreen: View {
     
 
     var matrix2:[String] = ["Ativo_19", "Ativo_20","Ativo_21","Ativo_22","Ativo_25"]
+
     
     
     var body: some View {
@@ -30,7 +31,7 @@ struct MissoesScreen: View {
                     ForEach(matrix2, id: \.self) { line in
                         HStack{
                             //ForEach(line, id: \.self) { column in
-                                NavigationLink(destination: BlocosTestFlight()){
+                                NavigationLink(destination: MissaoVAI()){
                                 CollectionViewCell(text: line)
                                 }.buttonStyle(PlainButtonStyle())
                                 

@@ -1,16 +1,16 @@
 //
-//  InfoModal.swift
+//  InfoModal2.swift
 //  PenguinBrad
 //
-//  Created by Bruna Costa on 24/07/20.
+//  Created by Bruna Costa on 20/08/20.
 //  Copyright © 2020 Fernando Lobo. All rights reserved.
 //
 
 import SwiftUI
 
-struct InfoView: View {
+struct InfoModal2: View {
     
-    let dataSentences = BreusonDialogue(["Olá novamente. \nAntes de tudo é indicado que você acompanhe as missões junto com a interface do Processing no computador, executando o código ensinado, se possível. \nTodo código das missões pode ser escrito na interface.","A primeira coisa que devemos fazer é digitar duas funções fundamentais para a construção da nossa cena. São elas as void setup() e a função void draw().","A função void setup() roda apenas uma vez e serve para definir o ambiente em que rodaremos nosso desenho, como o tamanho da tela.","A função void draw() é a função, como o nome diz, que irá desenhar no plano as formas e figuras que quisermos.","Com isso que você aprendeu, tente experimentar e brincar com os conceitos."," O que aconteceria se essas funções estivessem em outro lugar? E se os números mudassem? Não tem problema se der algum erro, use a criatividade! "])
+    let dataSentences = BreusonDialogue(["Olá novamente. \nPrimeiramente, para você conseguir adicionar qualquer coisa na sua tela, você precisa criá-la! Para fazer isso, toque no primeiro bloco da funcão setup. O termo “size” que apareceu indica o tamanho da tela ","Agora você pode adicionar na sua tela formas 2D,para isso, clique no triângulo da função draw(). \nVeja como a figura se adaptou ao código que seria em Processing!","Agora que você desvendou as formas,você pode visualizar o que criou clicando no botão para Play","Note que as coordenadas são medidas a partir do canto superior esquerdo da tela. Portanto, quanto maior o número do X e Y, o objeto estará mais próximo ao canto direito inferior respectivamente."])
     @State private var currentDialogue: String = ""
     @State private var tapped: Bool = false
     @State private var draggedOffset: CGSize = CGSize.zero
@@ -37,7 +37,7 @@ struct InfoView: View {
                             Spacer()
                             HStack {
                                 Spacer()
-                                if currentDialogue != "Olá novamente. \nAntes de tudo é indicado que você acompanhe as missões junto com a interface do Processing no computador, executando o código ensinado, se possível. \nTodo código das missões pode ser escrito na interface." {
+                                if currentDialogue != "Olá novamente. \nPrimeiramente, para você conseguir adicionar qualquer coisa na sua tela, você precisa criá-la! Para fazer isso, toque no primeiro bloco da funcão setup. O termo “size” que apareceu indica o tamanho da tela " {
                                     
                                 Button(action: {
                                     self.currentDialogue = self.dataSentences.previous
@@ -50,7 +50,7 @@ struct InfoView: View {
                                     Spacer()
                                 }
                                 //Spacer()
-                                if currentDialogue !=  " O que aconteceria se essas funções estivessem em outro lugar? E se os números mudassem? Não tem problema se der algum erro, use a criatividade! "{
+                                if currentDialogue !=  "Note que as coordenadas são medidas a partir do canto superior esquerdo da tela. Portanto, quanto maior o número do X e Y, o objeto estará mais próximo ao canto direito inferior respectivamente."{
                                 Button(action: {
                                     self.currentDialogue = self.dataSentences.next
                                 }) {
@@ -85,28 +85,11 @@ struct InfoView: View {
                 self.presentationMode.wrappedValue.dismiss()}
             
         }
-            
-            
-        
-        /*draggable.gesture(DragGesture()
-        .onChanged{ value in
-            self.draggedOffset = value.translation
-        }
-            
-        .onEnded{ value in
-            self.draggedOffset = CGSize.zero
-            }
-            
-        )*/
-        
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
+struct InfoModal2_Previews: PreviewProvider {
     static var previews: some View {
-        InfoView()
+        InfoModal2()
     }
 }
-
-
-

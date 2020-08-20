@@ -97,7 +97,7 @@ struct BlocosTestFlight: View {
                                     
                                     Circle().foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).frame(width: 50, height: 50).shadow(radius: 3).overlay(Image(systemName: "info.circle").fixedSize().padding())
                                 }}.sheet(isPresented: $showingModal) {
-                                    InfoView()
+                                    InfoModal2()
                                     
                             }.buttonStyle(PlainButtonStyle()).foregroundColor(Color.blue)
                             

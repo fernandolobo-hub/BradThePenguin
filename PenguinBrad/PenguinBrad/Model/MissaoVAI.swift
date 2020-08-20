@@ -67,15 +67,16 @@ struct MissaoVAI: View {
                              }.buttonStyle(PlainButtonStyle()).foregroundColor(Color.blue)
                          
                  }
-                             
+                         Spacer()
+                    Spacer()
                          }
 
-                     }.blur(radius: previewView ? 0 : 6)
+                        }.padding().blur(radius: previewView ? 0 : 6)
                      if !previewView{
                      ZStack{
                          VStack{
                              ZStack{
-                                 RoundedRectangle(cornerRadius: 5).foregroundColor(Color.white).frame(width: 350, height: 150).shadow(radius: 3).overlay(Text(" Olá, me chamo Breuson, e estou aqui para introduzir para você alguns conceito programação criativa em Processing, vamos lá!").padding()).padding()}
+                                RoundedRectangle(cornerRadius: 5).foregroundColor(Color.white).frame(width: 350, height: 300).shadow(radius: 3).overlay(Text("    Olá, meu nome é Breuson e eu serei seu guia nessa jornada de introdução à programação criativa através da linguagem Processing. \n    Irei te auxiliar ao longo das missões dando dicas, indicando o que deve ser feito e explicando os conceitos ao longo das missões. \n    Toda vez que estiver com dúvidas, clique em Info.").font(.custom("Avenir Next", size: 16)).padding()).padding()}
                              HStack{
                                  Image("breuson").resizable().frame(width: 50, height: 100)
                                  Spacer()
@@ -87,13 +88,14 @@ struct MissaoVAI: View {
                      }) {
                          ZStack{
                              RoundedRectangle(cornerRadius: 5).foregroundColor(Color.white).frame(width: 150, height: 30).shadow(radius: 3)
-                             Text ("Aceitar Missão").lineLimit(5).padding()
+                            Text ("Aceitar Missão").lineLimit(5).padding()
                              
-                         }
+                        }
                          
-                             }}.padding(.top, 100)
+                             }}
+                            .padding(.top, 50)
                      }
-                         
+                       
                      }
              }
     }
