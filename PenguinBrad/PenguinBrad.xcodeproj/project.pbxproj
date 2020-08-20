@@ -25,6 +25,7 @@
 		F1B70F3624C7752800187CBE /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B70F3524C7752800187CBE /* SafariView.swift */; };
 		F1C56BDA24EED04E00BA52FA /* BlocosTestFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C56BD924EED04E00BA52FA /* BlocosTestFlight.swift */; };
 		F1C56BDC24EEE04C00BA52FA /* Missao0.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C56BDB24EEE04C00BA52FA /* Missao0.swift */; };
+		F1C56BDE24EEEECA00BA52FA /* MissaoVAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C56BDD24EEEECA00BA52FA /* MissaoVAI.swift */; };
 		F1EF0A8024CB4AA000055CE7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A7F24CB4AA000055CE7 /* CollectionViewCell.swift */; };
 		F1EF0A8C24CB740D00055CE7 /* Blocos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A8B24CB740D00055CE7 /* Blocos.swift */; };
 		F1EF0A8E24CB749000055CE7 /* PlayModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF0A8D24CB749000055CE7 /* PlayModal.swift */; };
@@ -53,6 +54,7 @@
 		F1B70F3524C7752800187CBE /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		F1C56BD924EED04E00BA52FA /* BlocosTestFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocosTestFlight.swift; sourceTree = "<group>"; };
 		F1C56BDB24EEE04C00BA52FA /* Missao0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missao0.swift; sourceTree = "<group>"; };
+		F1C56BDD24EEEECA00BA52FA /* MissaoVAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissaoVAI.swift; sourceTree = "<group>"; };
 		F1EF0A7F24CB4AA000055CE7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F1EF0A8B24CB740D00055CE7 /* Blocos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocos.swift; sourceTree = "<group>"; };
 		F1EF0A8D24CB749000055CE7 /* PlayModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayModal.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				F1EF0A8B24CB740D00055CE7 /* Blocos.swift */,
 				F1C56BD924EED04E00BA52FA /* BlocosTestFlight.swift */,
 				F1C56BDB24EEE04C00BA52FA /* Missao0.swift */,
+				F1C56BDD24EEEECA00BA52FA /* MissaoVAI.swift */,
 				F1EF0A8D24CB749000055CE7 /* PlayModal.swift */,
 				F1EF0A8F24CB74A100055CE7 /* ListModal.swift */,
 				F1EF0A9124CB74B500055CE7 /* InfoModal.swift */,
@@ -223,6 +226,7 @@
 			files = (
 				F12CE50924C8AEA600EBF4A6 /* TelaContentViewNova.swift in Sources */,
 				244E04B024DE46BA00BEFF93 /* ChallengeInstructionsData.swift in Sources */,
+				F1C56BDE24EEEECA00BA52FA /* MissaoVAI.swift in Sources */,
 				F1EF0A8E24CB749000055CE7 /* PlayModal.swift in Sources */,
 				F1EF0A8C24CB740D00055CE7 /* Blocos.swift in Sources */,
 				24A928DB24CB03B90087D944 /* Challenges.swift in Sources */,
