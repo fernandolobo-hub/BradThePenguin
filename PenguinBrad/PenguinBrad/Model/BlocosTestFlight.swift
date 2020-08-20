@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct BlocosTestFlight: View {
-    
 
     
     @State var showingModal = false
@@ -17,8 +16,6 @@ struct BlocosTestFlight: View {
     @State var showingModal3 = false
     @State var addItem1 = false
     @State var addItem2 = false
-    
-    //NSAttributedString
     
     
     var body: some View {
@@ -88,64 +85,7 @@ struct BlocosTestFlight: View {
                             
                         
                         }.padding()
-                        
                     
-                    
-                      /*
-                        HStack{
-                            
-                            VStack{
-                            VStack{
-                                Text("void setup() {").fontWeight(.bold).padding()
-                                
-                                VStack{
-                                Button(action: {
-                                    self.addItem1.toggle()
-                                }) {
-                                    ZStack{
-                                        
-                                        if !addItem1 {
-                                            Rectangle().foregroundColor(Color.white).border(Color.black).frame(width: 130, height: 45).shadow(radius: 2)
-                                            Text("size (500, 500)").blur(radius: 5)
-                                        }
-                                        else {
-                                            Text("size (500, 500)").blur(radius: 0)
-                                        }
-                                        }
-                                        
-                                    }
-                                }}.buttonStyle(PlainButtonStyle())
-                                Spacer()
-                            Text("}").fontWeight(.bold).padding().padding(.bottom, 30)
-                                
-                                Text("void draw() {").fontWeight(.bold).padding(.bottom, 10)
-                                Button(action: {
-                                self.addItem2.toggle()
-                            }) {
-                                ZStack{
-                                    
-                                    if addItem2 == true {
-                                        Text("triangle (200,200,300,300,250,200)").foregroundColor(Color.green).font(.custom("Avenir Next", size: 13))
-                                    }
-                                    else{
-                                        Rectangle().foregroundColor(Color.white).border(Color.black).frame(width: 130, height: 45).shadow(radius: 2).overlay(
-                                        Image(systemName: "triangle").foregroundColor(Color.green))
-                                    }
-                                    }
-                                    
-                                }.buttonStyle(PlainButtonStyle())
-                                
-                                Spacer()
-                            Text("}").fontWeight(.bold)
-                            Spacer()
-                        }.padding()
-                            Spacer()
-                        }
-                    
-                    }//.padding()
-                       
-                    
-            */
                         
                   
                     HStack{
