@@ -31,7 +31,7 @@ struct MissoesScreen: View {
                     ForEach(matrix2, id: \.self) { line in
                         HStack{
                             //ForEach(line, id: \.self) { column in
-                                NavigationLink(destination: MissaoVAI()){
+                                NavigationLink(destination: BlocosTestFlight()){
                                 CollectionViewCell(text: line)
                                 }.buttonStyle(PlainButtonStyle())
                                 
