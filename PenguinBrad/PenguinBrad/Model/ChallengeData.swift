@@ -10,7 +10,7 @@ import Foundation
 
 
 
-struct Challenge: Identifiable{
+struct Challenge: Identifiable, Hashable{
     
     var id = UUID()
     let name: String

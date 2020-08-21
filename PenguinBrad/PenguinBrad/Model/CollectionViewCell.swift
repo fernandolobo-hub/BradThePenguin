@@ -16,7 +16,7 @@ struct CollectionViewCell: View {
     var body: some View {
         ZStack{
     
-            Image(text).resizable().aspectRatio( contentMode: .fit)
+            Image(text).resizable().renderingMode(.original).aspectRatio( contentMode: .fit)
             
         }.padding(.bottom, 5).padding([.leading,.trailing])
         

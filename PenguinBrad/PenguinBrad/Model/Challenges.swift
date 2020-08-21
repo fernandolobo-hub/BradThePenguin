@@ -11,7 +11,7 @@ import SwiftUI
 
 struct Challenges: View {
     
-    @State private var showingAlert = false
+    @State private var showingAlert: Bool = false
     
     var body: some View {
         
@@ -21,55 +21,36 @@ struct Challenges: View {
                 
                 List(challengeData){ challenge in
                     
-                    VStack{
+                    if challenge.imageName == "Lock"{
+                        
+                        Button(action: {
+                            if challenge.imageName == "Lock"{
+                                self.showingAlert.toggle()
+                            }
+                        }) {
+                            
+                            ChallengeCard(challenge: challenge)
+                        }
+                    }
+                        
+                    else{
                         
                         NavigationLink(destination: ChallengeInstructions(challenge: challenge)) {
-                            EmptyView()
+                            
+                            ChallengeCard(challenge: challenge)
                         }.buttonStyle(PlainButtonStyle())
-  
                         
-                        Spacer()
-                        HStack(alignment: .top){
-                            Image(challenge.imageName)
-                                .resizable()
-                                .frame(width: 40, height: 40, alignment: .trailing).padding() //80,90
-                                //.overlay(Rectangle().stroke(Color.secondary, lineWidth: 1))
-                                .padding(.top, 10)
-                            VStack(alignment: .leading){
-                                Text(challenge.name).font(.custom("Avenir Next", size: 17)).minimumScaleFactor(0.5)
-                                //.font(.system(size: 18, weight: .bold, design: .default))
-                                Text(challenge.topic).font(.custom("Avenir Next", size: 17)).minimumScaleFactor(0.5)
-                                    //.font(.system(size: 16, weight: .semibold, design: .default)))
-                                    .foregroundColor(.secondary)
-                                
-                            }.navigationBarTitle("Challenges").font(.title).padding(.top, 10).padding(.leading, 5)
-                                .alert(isPresented: self.$showingAlert){
-                                    Alert(title: Text("Bloqueado"), message: Text("Desafio em desenvolvimento"),dismissButton: .default(Text("OK")))
-                                    
-                            }
-                            Spacer()
-                            Image(systemName: "chevron.right").font(.custom("Avenir Next", size: 17)).minimumScaleFactor(0.5).padding()
-                            
-                            //.font(.system(size: 18, design: .default)).minimumScaleFactor(0.5).padding()
-                        }.onTapGesture{
-                            
-                            if challenge.imageName == "Lock"{
-                                
-                                self.showingAlert.toggle()
-                                
-                            }
-                        
-                            
-                            
-                        }
-                        
-                        
-                        Spacer()
                     }
+                    
+                    
+                    
                 }
                     
                 .onAppear {
                     UITableView.appearance().separatorStyle = .none
+                }.alert(isPresented: self.$showingAlert){
+                    Alert(title: Text("Bloqueado"), message: Text("Desafio em desenvolvimento"),dismissButton: .default(Text("OK")))
+                    
                 }
                 
             }
@@ -87,4 +68,6 @@ struct Challenges_Previews: PreviewProvider {
         Challenges()
     }
 }
+
+
 
