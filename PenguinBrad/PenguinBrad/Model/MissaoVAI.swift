@@ -76,7 +76,7 @@ struct MissaoVAI: View {
                      ZStack{
                          VStack{
                              ZStack{
-                                RoundedRectangle(cornerRadius: 5).foregroundColor(Color.white).frame(width: 350, height: 300).shadow(radius: 3).overlay(Text("    Olá, meu nome é Breuson e eu serei seu guia nessa jornada de introdução à programação criativa através da linguagem Processing. \n    Irei te auxiliar ao longo das missões dando dicas, indicando o que deve ser feito e explicando os conceitos ao longo das missões. \n    Toda vez que estiver com dúvidas, clique em Info.").font(.custom("Avenir Next", size: 16)).padding()).padding()}
+                                RoundedRectangle(cornerRadius: 5).foregroundColor(Color.white).frame(width: 350, height: 300).shadow(radius: 3).overlay(Text("    Olá, meu nome é Benny e eu serei seu guia nessa jornada de introdução à programação criativa através da linguagem Processing. \n    Irei te auxiliar ao longo das missões dando dicas, indicando o que deve ser feito e explicando os conceitos ao longo das missões. \n    Toda vez que estiver com dúvidas, clique em Info.").font(.custom("Avenir Next", size: 16)).padding()).padding()}
                              HStack{
                                  Image("breuson").resizable().frame(width: 50, height: 100)
                                  Spacer()
