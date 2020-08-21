@@ -10,6 +10,7 @@ import SwiftUI
 struct CollectionViewCell: View {
 
     var text:String
+    
 
     
     var body: some View {
